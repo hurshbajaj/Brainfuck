@@ -45,7 +45,6 @@ fn run(code: &str) {
             ']' => {
                 if tape[ptr] != 0 {
                     pc = *loop_stack.last().expect("Unmatched ]");
-                    continue;
                 } else {
                     loop_stack.pop();
                 }
